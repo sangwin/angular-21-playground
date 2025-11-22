@@ -1,0 +1,46 @@
+<!-- /**
+ * Project: Angular 21 Demo Playground
+ * Description: Angular 21 Demo Playground for fun demo
+ * Author: Sangwin Gawande
+ * GitHub: https://github.com/sangwin
+ * Date: 2025-11-22
+ */ -->
+
+<div class="demo-container">
+  <h2>Angular 21 Interactive Playground</h2>
+  <h4><a href="https://sangw.in">Sangwin Gawande</a></h4>
+
+  <div class="controls">
+    <label>
+      Text:
+      <input type="text" [formControl]="textControl" />
+    </label>
+
+    <label>
+      Size: {{ size() }}px
+      <input type="range" min="10" max="80" [formControl]="sizeControl" />
+    </label>
+
+    <label>
+      Color:
+      <input type="color" [formControl]="colorControl" />
+    </label>
+
+    <label>
+      Reverse:
+      <input type="checkbox" [formControl]="reverseControl" />
+    </label>
+  </div>
+
+  <div class="preview">
+    <p [ngStyle]="previewStyle()">{{ !textReverse() ? text() : text().split("").reverse().join("") }}</p>
+  </div>
+</div>
+
+<!-- /**
+ * Project: Angular 21 Demo Playground
+ * Description: Angular 21 Demo Playground for fun demo
+ * Author: Sangwin Gawande
+ * GitHub: https://github.com/sangwin
+ * Date: 2025-11-22
+ */ -->
